@@ -12,3 +12,25 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryEl = document.querySelector('#gallery')
+  galleryEl.style.listStyle = 'none'
+  galleryEl.style.display = 'grid'
+  galleryEl.style.gridTemplateColumns = '400px 400px 400px'
+  galleryEl.style.gridColumnGap = '50px'
+  
+const makeCollectionMarkup = attributes => {
+  const { url, alt } = attributes
+  return `
+    <li>
+      <img src="${url}" alt="${alt}" width="400">
+    </li>
+  `
+}
+
+const items = images.map(makeCollectionMarkup).join(' ')
+
+galleryEl.insertAdjacentHTML(
+  'beforeend',
+  items
+)
