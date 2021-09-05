@@ -16,8 +16,8 @@ const images = [
 const galleryEl = document.querySelector('#gallery')
   galleryEl.style.listStyle = 'none'
   galleryEl.style.display = 'grid'
-  galleryEl.style.gridTemplateColumns = '400px 400px 400px'
-  galleryEl.style.gridColumnGap = '50px'
+galleryEl.style.gridTemplateColumns = 'repeat(3, 2fr)'
+galleryEl.style.gridColumnGap = '0,5fr'
   
 const makeCollectionMarkup = attributes => {
   const { url, alt } = attributes
