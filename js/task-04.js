@@ -1,21 +1,23 @@
 const decBtn = document.querySelector('[data-action="decrement"]');
 const incBtn = document.querySelector('[data-action="increment"]');
-const valueBtn = document.gquerySelector('#value');
+const valueBtn = document.querySelector('#value');
 
-function getCount() {
-    let count = 0
-    function dec() {
-        return (count-=1)
+let counterValue = 0
+
+function onDecCount() {
+    
+    valueBtn.textContent = counterValue
+    return (counterValue -= 1)
     }
-    function inc () {
-        return count+=1
+    function  onIncCount() {
+        
+        valueBtn.textContent = counterValue
+        return (counterValue += 1)
     }
-    return (dec,inc)
+   
 
-}
+// const elem = getCount()
+//  console.log(elem)
 
-const elem = getCount()
-console.log(elem)
-
-decBtn.addEventListener('click')
-incBtn.addEventListener('click')
+decBtn.addEventListener('click', onDecCount)
+incBtn.addEventListener('click',onIncCount)
