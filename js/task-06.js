@@ -4,7 +4,7 @@ inputLength.addEventListener("blur", (number) => {
     // console.log(Number(inputLength.attributes["data-length"].value));
     function newClass(add, replase) {
    inputLength.classList.add(add);
-    inputLength.classList.replace(replase);
+    inputLength.classList.remove(replase);
 }
 
     if (number.target.value.length === Number(inputLength.attributes["data-length"].value)) {
