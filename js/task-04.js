@@ -5,14 +5,14 @@ const valueBtn = document.querySelector('#value');
 let counterValue = 0
 
 function onDecCount() {
-    
-    valueBtn.textContent = counterValue
-    return (counterValue -= 1)
+    counterValue -= 1;
+    valueBtn.textContent = counterValue;
+    return ;
     }
     function  onIncCount() {
-        
-        valueBtn.textContent = counterValue
-        return (counterValue += 1)
+        counterValue += 1;
+        valueBtn.textContent = counterValue;
+        return ;
     }
    
 
